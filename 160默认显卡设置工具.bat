@@ -5,19 +5,19 @@ ver|find "5.">nul&&goto :search_graphicscard
 mshta vbscript:createobject("shell.application").shellexecute("%~s0","goto :search_graphicscard","","runas",1)(window.close)&goto :eof
 
 :search_graphicscard
-:: ÉèÖÃ×¢²á±íÏîµÄÂ·¾¶
+:: è®¾ç½®æ³¨å†Œè¡¨é¡¹çš„è·¯å¾„
 set reg_path=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}
 echo.
-echo ÇëÊ¹ÓÃ¹ÜÀíÔ±Éí·İÔËĞĞ½Å±¾
-:: ²éÕÒÉè±¸Ãû³Æ
+echo è¯·ä½¿ç”¨ç®¡ç†å‘˜èº«ä»½è¿è¡Œè„šæœ¬
+:: æŸ¥æ‰¾è®¾å¤‡åç§°
 echo.
-echo ÕıÔÚËÑË÷µ±Ç°µçÄÔÒÑ°²×°µÄÏÔ¿¨ÒÔ¼°ÏÔ¿¨µÄĞòºÅ...
+echo æ­£åœ¨æœç´¢å½“å‰ç”µè„‘å·²å®‰è£…çš„æ˜¾å¡ä»¥åŠæ˜¾å¡çš„åºå·...
 echo.
-echo Èô³öÏÖÍ¬Ò»ÕÅÏÔ¿¨¶ÔÓ¦¶à¸öĞòºÅµÄÇé¿ö£¬´ú±íÇı¶¯Ã»ÓĞÍêÈ«Ğ¶ÔØ
+echo è‹¥å‡ºç°åŒä¸€å¼ æ˜¾å¡å¯¹åº”å¤šä¸ªåºå·çš„æƒ…å†µï¼Œä»£è¡¨é©±åŠ¨æ²¡æœ‰å®Œå…¨å¸è½½
 echo.
-echo Óöµ½ÉÏÊöÇé¿ö½¨ÒéÇëÊ¹ÓÃDDU¶ÔËùÓĞÏÔ¿¨Çı¶¯ÖØĞÂ½øĞĞÇåÀí£¬Ö±µ½Ê£ÏÂÒ»¸ö
+echo é‡åˆ°ä¸Šè¿°æƒ…å†µå»ºè®®è¯·ä½¿ç”¨DDUå¯¹æ‰€æœ‰æ˜¾å¡é©±åŠ¨é‡æ–°è¿›è¡Œæ¸…ç†ï¼Œç›´åˆ°å‰©ä¸‹ä¸€ä¸ª
 echo.
-echo ÕâÀïÄ¬ÈÏ×î¶àÏÔÊ¾7¸ö
+echo è¿™é‡Œé»˜è®¤æœ€å¤šæ˜¾ç¤º7ä¸ª
 echo.
 for /f "tokens=*" %%a in ('reg query "%reg_path%"') do (
     set "line=%%a"
@@ -26,76 +26,76 @@ for /f "tokens=*" %%a in ('reg query "%reg_path%"') do (
         set "reg_key=!reg_path!\0000"
         for /f "tokens=2,*" %%b in ('reg query "!reg_key!" /v DriverDesc 2^>nul ^| findstr /i "DriverDesc"') do (
                 set "driver_desc=%%c"
-                echo !line:~-1!£º!driver_desc!
+                echo !line:~-1!ï¼š!driver_desc!
         )
     ) else if "!last_four_chars!"=="0001" (
        set "reg_key=!reg_path!\0001"
         for /f "tokens=2,*" %%b in ('reg query "!reg_key!" /v DriverDesc 2^>nul ^| findstr /i "DriverDesc"') do (
                 set "driver_desc=%%c"
-                echo !line:~-1!£º!driver_desc!
+                echo !line:~-1!ï¼š!driver_desc!
         )
     ) else if "!last_four_chars!"=="0002" (
        set "reg_key=!reg_path!\0002"
         for /f "tokens=2,*" %%b in ('reg query "!reg_key!" /v DriverDesc 2^>nul ^| findstr /i "DriverDesc"') do (
                 set "driver_desc=%%c"
-                echo !line:~-1!£º!driver_desc!
+                echo !line:~-1!ï¼š!driver_desc!
         )
     ) else if "!last_four_chars!"=="0003" (
        set "reg_key=!reg_path!\0003"
         for /f "tokens=2,*" %%b in ('reg query "!reg_key!" /v DriverDesc 2^>nul ^| findstr /i "DriverDesc"') do (
                 set "driver_desc=%%c"
-                echo !line:~-1!£º!driver_desc!
+                echo !line:~-1!ï¼š!driver_desc!
         )
     ) else if "!last_four_chars!"=="0004" (
        set "reg_key=!reg_path!\0004"
         for /f "tokens=2,*" %%b in ('reg query "!reg_key!" /v DriverDesc 2^>nul ^| findstr /i "DriverDesc"') do (
                 set "driver_desc=%%c"
-                echo !line:~-1!£º!driver_desc!
+                echo !line:~-1!ï¼š!driver_desc!
         )
     ) else if "!last_four_chars!"=="0005" (
        set "reg_key=!reg_path!\0005"
         for /f "tokens=2,*" %%b in ('reg query "!reg_key!" /v DriverDesc 2^>nul ^| findstr /i "DriverDesc"') do (
                 set "driver_desc=%%c"
-                echo !line:~-1!£º!driver_desc!
+                echo !line:~-1!ï¼š!driver_desc!
         )
     ) else if "!last_four_chars!"=="0006" (
        set "reg_key=!reg_path!\0006"
         for /f "tokens=2,*" %%b in ('reg query "!reg_key!" /v DriverDesc 2^>nul ^| findstr /i "DriverDesc"') do (
                 set "driver_desc=%%c"
-                echo !line:~-1!£º!driver_desc!
+                echo !line:~-1!ï¼š!driver_desc!
         )
     ) else if "!last_four_chars!"=="0007" (
        set "reg_key=!reg_path!\0007"
         for /f "tokens=2,*" %%b in ('reg query "!reg_key!" /v DriverDesc 2^>nul ^| findstr /i "DriverDesc"') do (
                 set "driver_desc=%%c"
-                echo !line:~-1!£º!driver_desc!
+                echo !line:~-1!ï¼š!driver_desc!
         )
     )
 )
 
 echo.
-echo ÈôÁÁ»ú¿¨ÎªAMD¶ÀÏÔ£¬Çë½«NVIDIAÉèÖÃÎª½ÚÄÜ£¬AMDÉèÖÃÎª¸ßĞÔÄÜ£¬È»ºóÔÚÍ¼ĞÎÉèÖÃÖĞÇ¿ÖÆµ÷ÓÃ
+echo è‹¥äº®æœºå¡ä¸ºAMDç‹¬æ˜¾ï¼Œè¯·å°†NVIDIAè®¾ç½®ä¸ºèŠ‚èƒ½ï¼ŒAMDè®¾ç½®ä¸ºé«˜æ€§èƒ½ï¼Œç„¶ååœ¨å›¾å½¢è®¾ç½®ä¸­å¼ºåˆ¶è°ƒç”¨
 echo.
-echo ÈôÁÁ»ú¿¨ÎªNVIDIA¶ÀÏÔ£¬Çë½«ÁÁ»ú¿¨ÉèÖÃÎª½ÚÄÜ£¬¼ÆËã¿¨ÉèÖÃÎª¸ßĞÔÄÜ£¬ÏµÍ³¼´¿É×Ô¶¯µ÷ÓÃ
+echo è‹¥äº®æœºå¡ä¸ºNVIDIAç‹¬æ˜¾ï¼Œè¯·å°†äº®æœºå¡è®¾ç½®ä¸ºèŠ‚èƒ½ï¼Œè®¡ç®—å¡è®¾ç½®ä¸ºé«˜æ€§èƒ½ï¼Œç³»ç»Ÿå³å¯è‡ªåŠ¨è°ƒç”¨
 echo.
-:: Ñ¯ÎÊÓÃ»§Ñ¡Ôñ
-echo Çë½«ÄÄÒ»ÕÅÏÔ¿¨ÉèÖÃÎª½ÚÄÜÏÔ¿¨(ÁÁ»ú¿¨/½ö×÷ÎªÊä³ö»­ÃæµÄÏÔ¿¨)£¿ÊäÈëĞòºÅºó»Ø³µÈ·ÈÏ¡£
-set /p powersave_num=ÇëÊäÈë: 
+:: è¯¢é—®ç”¨æˆ·é€‰æ‹©
+echo è¯·å°†å“ªä¸€å¼ æ˜¾å¡è®¾ç½®ä¸ºèŠ‚èƒ½æ˜¾å¡(äº®æœºå¡/ä»…ä½œä¸ºè¾“å‡ºç”»é¢çš„æ˜¾å¡)ï¼Ÿè¾“å…¥åºå·åå›è½¦ç¡®è®¤ã€‚
+set /p powersave_num=è¯·è¾“å…¥: 
 echo.
-echo Çë½«ÄÄÒ»ÕÅÏÔ¿¨ÉèÖÃÎª¸ßĞÔÄÜÏÔ¿¨(ÓÎÏ·äÖÈ¾µ÷ÓÃµÄÏÔ¿¨)£¿ÊäÈëĞòºÅºó»Ø³µÈ·ÈÏ¡£
-set /p highperformance_num=ÇëÊäÈë: 
+echo è¯·å°†å“ªä¸€å¼ æ˜¾å¡è®¾ç½®ä¸ºé«˜æ€§èƒ½æ˜¾å¡(æ¸¸æˆæ¸²æŸ“è°ƒç”¨çš„æ˜¾å¡)ï¼Ÿè¾“å…¥åºå·åå›è½¦ç¡®è®¤ã€‚
+set /p highperformance_num=è¯·è¾“å…¥: 
 echo.
-:: ÉèÖÃ½ÚÄÜÏÔ¿¨
+:: è®¾ç½®èŠ‚èƒ½æ˜¾å¡
     set "powersave_reg=%reg_path%\000%powersave_num%"
     reg add "!powersave_reg!" /v "EnableMsHybrid" /t REG_DWORD /d 00000006 /f
     reg add "!powersave_reg!" /v "GridLicensedFeatures" /t REG_DWORD /d 00000007 /f
 	set "reg_key=!reg_path!\000%powersave_num%"
     for /f "tokens=2,*" %%b in ('reg query "!reg_key!" /v DriverDesc 2^>nul ^| findstr /i "DriverDesc"') do (
 	set "driver_desc=%%c")
-    echo ÒÑ½« !driver_desc! ÉèÖÃÎª½ÚÄÜÏÔ¿¨¡£
+    echo å·²å°† !driver_desc! è®¾ç½®ä¸ºèŠ‚èƒ½æ˜¾å¡ã€‚
 	echo.
 
-:: ÉèÖÃ¸ßĞÔÄÜÏÔ¿¨
+:: è®¾ç½®é«˜æ€§èƒ½æ˜¾å¡
     set "highperformance_reg=%reg_path%\000%highperformance_num%"
     reg add "!highperformance_reg!" /v "EnableMsHybrid" /t REG_DWORD /d 00000001 /f
     reg add "!highperformance_reg!" /v "GridLicensedFeatures" /t REG_DWORD /d 00000007 /f
@@ -103,7 +103,7 @@ echo.
 	set "reg_key=!reg_path!\000%highperformance_num%"
     for /f "tokens=2,*" %%b in ('reg query "!reg_key!" /v DriverDesc 2^>nul ^| findstr /i "DriverDesc"') do (
 	set "driver_desc=%%c")
-    echo ÒÑ½« !driver_desc! ÏÔ¿¨ÉèÖÃÎª¸ßĞÔÄÜÏÔ¿¨¡£
+    echo å·²å°† !driver_desc! æ˜¾å¡è®¾ç½®ä¸ºé«˜æ€§èƒ½æ˜¾å¡ã€‚
 	echo.
 pause
 
@@ -113,11 +113,11 @@ pause
 :recovery_set
 cls
 echo.
-echo ÈôÉèÖÃÕıÈ·£¬ÔÚÉè±¸¹ÜÀíÆ÷ÄÚ½ûÓÃ²¢ÆôÓÃÏÔ¿¨»òÕßÖØÆôÏµÍ³ºó¼´¿ÉÉúĞ§
+echo è‹¥è®¾ç½®æ­£ç¡®ï¼Œåœ¨è®¾å¤‡ç®¡ç†å™¨å†…ç¦ç”¨å¹¶å¯ç”¨æ˜¾å¡æˆ–è€…é‡å¯ç³»ç»Ÿåå³å¯ç”Ÿæ•ˆ
 echo.
-echo ÈôÉèÖÃÓĞÎó£¬ÊäÈëN»¹Ô­Ä¬ÈÏ"ÏÔ¿¨µ÷ÓÃ"Éè¶¨
+echo è‹¥è®¾ç½®æœ‰è¯¯ï¼Œè¾“å…¥Nè¿˜åŸé»˜è®¤"æ˜¾å¡è°ƒç”¨"è®¾å®š
 echo.
-SET /P RECOVERY_SET="ÊäÈëY»òÕßÖ±½Ó»Ø³µÎªÌø¹ı±¾²½Öè£¬ÊäÈëN»¹Ô­Éè¶¨£º  "
+SET /P RECOVERY_SET="è¾“å…¥Yæˆ–è€…ç›´æ¥å›è½¦ä¸ºè·³è¿‡æœ¬æ­¥éª¤ï¼Œè¾“å…¥Nè¿˜åŸè®¾å®šï¼š  "
 IF /I "%RECOVERY_SET%" EQU "N" GOTO :recovery_mshybrid
 IF /I "%RECOVERY_SET%" EQU "Y" GOTO :eof
 
@@ -127,7 +127,7 @@ goto :eof
 
 
 :recovery_mshybrid
-echo ÕıÔÚ»¹Ô­Éè¶¨
+echo æ­£åœ¨è¿˜åŸè®¾å®š
 reg delete HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000 /v EnableMsHybrid /f
 reg delete HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0001 /v EnableMsHybrid /f
 reg delete HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0002 /v EnableMsHybrid /f
